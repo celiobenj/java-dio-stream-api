@@ -26,6 +26,9 @@ public class ConsumerExample {
         //?     }
         //? });
 
-        numeros.forEach(n -> { if (n % 2 == 0) System.out.println(n); });
+        // numeros.forEach(n -> { if (n % 2 == 0) System.out.println(n); });
+        numeros.stream()
+            .filter(n -> n % 2 == 0)
+            .forEach(System.out::println);
     }
 }
